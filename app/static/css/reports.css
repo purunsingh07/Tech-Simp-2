@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark: #7FC7D9;
+    --light: #DCF2F1;
+    --material: #0F1035;
+    --text: black;
+    --lightText: #ffffff ;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light);
+    user-select: none;
+    color: var(--material);
+    font-family: 'Open Sans';
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#appT {
+    font-weight: 600;
+    font-size: 28px;
+    padding-left: 3%;
+}
+
+#appL1 {
+    width: 10%;
+    padding-top: 0.46%;
+}
+
+#appLogo {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+
+}
+
+#otherMenus{
+    display: flex;
+    align-items: center;
+    margin-left: -4.5%;
+}
+
+
+#topBar {
+    background-color: var(--dark);
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: var(--material);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--material);
+    color: var(--lightText);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#signupButton{
+    width: 10%;
+    height: 6vh;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: var(--lightText);
+    background-color: var(--material);
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: 2%;
+    cursor: pointer;
+   
+}
+
+.aM, #a1{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-family: 'Open Sans';
+    margin-left: 9%;
+    white-space: nowrap;
+    
+}
+
+.aM:hover, #a1:hover{
+  font-weight: 600;
+}
+
+i{
+    padding-left: 5%;
+}
+
+#modeColor{
+    
+    font-size: 28px;
+    margin-left: 2%;
+    cursor: pointer;
+   
+}
+
+
+.usersurvey{
+    display: grid;
+    grid-template-rows: 0.5fr .5fr .5fr;
+    align-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 40px;
+    padding: 30px;
+    background-color: var(--dark);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.reportdetail{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: 600;
+}
+.img{
+    padding: 0;
+    width: 4rem;
+    height: 3rem;
+}
+
+.usersurvey h1{
+  text-align: center;
+}
+.graph{
+    display: flex;
+    background-color: var(--dark);
+    padding: 150px;
+    margin: 160px;
+}
+.reportd{
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+}

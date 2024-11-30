@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imposter</title>
+
+  <script src="https://kit.fontawesome.com/6cc1a5eb9c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reports.css') }}" />
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/appLogo.png')}}" type="image/x-icon" />
+</head>
+
+<body>
+
+  <div id="topBar">
+
+    <div id="appLogo">
+      <img id="appL1" src="{{ url_for('static', filename='images/appLogo.png')}}" alt="">
+      <h1 id="appT">Imposter</h1>
+    </div>
+
+    <div id="otherMenus">
+      <a class="aM" id="homeIcon" href="#">Home</a>
+      <a class="aM" href="#">About us</a>
+
+
+      <div class="dropdown">
+        <button id="a1" class="dropbtn">Detection Tests <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#">Profile Completeness Test</a>
+          <a href="#">Activity Anomaly Test</a>
+          <a href="#">Content Analysis Test</a>
+          <a href="#">Image Authenticity Test</a>
+          <a href="#">Social Network Analysis</a>
+          <a href="#">Full Profile Test</a>
+          <a id="impTest" href="#">Bot or Automation Test</a>
+        </div>
+      </div>
+
+      <a class="aM" href="#">Reports</a>
+      <i id="modeColor" class="fa-solid fa-moon"></i>
+
+      <div class="creditBalance">
+        <p class="creditB">30</p>
+
+        <img class="creditI" src="{{ url_for('static', filename='images/credits.png')}}" alt="">
+      </div>
+
+    </div>
+
+    <button id="signupButton">Get Started</button>
+  </div>
+<div class="reportd">
+ <div class="usersurvey">
+    <h1>Reported account Details </h1>
+    <div class="reportdetail">
+        <h3>Puru Singh</h3>
+        <h5>60%</h5>
+    </div>
+    <div class="reportdetail">
+        <h3>Pratiksha Pandey</h3>
+        <h5>80%</h5>
+    </div>
+    <div class="reportdetail">
+        <h3>Rishabh kukdeja</h3>
+        <h5>60%</h5>
+    </div>
+ </div>
+ <div class="graph">
+    <h1>Daily report</h1>
+ </div> 
+ </div>
+
+
+
+  <script type="module" src="{{ url_for('static', filename='js/script.js')}}" type="image/x-icon"></script>
+</body>
+
+</html>
