@@ -8,18 +8,30 @@ import requests
 from PIL import Image
 from io import BytesIO
 
+# Path to store the Instagram session
+SESSION_FILE = "insta_session"
+
 # Function to authenticate with Instagram
 def authenticate_with_instagram():
     try:
         L = instaloader.Instaloader()
-        username = 'puru_13_singh07'
-        password = 'shlok@2008'
 
-        if not username or not password:
-            raise ValueError("Instagram credentials are not set in environment variables.")
+        # Load the session if it exists
+        if os.path.exists(SESSION_FILE):
+            L.load_session_from_file('puru_13_singh07', SESSION_FILE)
+            print("Session loaded successfully.")
+        else:
+            # Login and save session if not exists
+            username = 'puru_13_singh07'
+            password = 'shlok@2008'
 
-        L.login(username, password)
-        print("Successfully authenticated with Instagram.")
+            if not username or not password:
+                raise ValueError("Instagram credentials are not set.")
+
+            L.login(username, password)
+            L.save_session_to_file(SESSION_FILE)
+            print("Logged in and session saved.")
+
         return L
     except instaloader.BadCredentialsException:
         print("Invalid Instagram credentials. Please check your username and password.")
