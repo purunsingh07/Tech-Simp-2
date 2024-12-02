@@ -23,7 +23,7 @@ def authenticate_with_instagram():
         else:
             # Login and save session if not exists
             username = 'puru_13_singh07'
-            password = 'shlok@2008'
+            password = 'puru@2004'
 
             if not username or not password:
                 raise ValueError("Instagram credentials are not set.")
