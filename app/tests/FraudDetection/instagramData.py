@@ -68,11 +68,11 @@ def save_post_picture(img_url, username, post_index):
 
     base_dir = os.path.join(os.getcwd(), username)
     os.makedirs(base_dir, exist_ok=True)
-    post_dir = os.path.join(base_dir, f"{username}_post")
+    post_dir = os.path.join(base_dir, f"{username}_posts")
     os.makedirs(post_dir, exist_ok=True)
 
     img_data = requests.get(img_url).content
-    img_filename = f'{username}post{post_index + 1}.jpg'
+    img_filename = f'{username}_post_{post_index + 1}.jpg'
     img_path = os.path.join(base_dir,post_dir , img_filename)
     os.makedirs(os.path.dirname(img_path), exist_ok=True)  
     with open(img_path, 'wb') as file:
@@ -94,7 +94,7 @@ def get_recent_posts(username):
     posts = []
     
     if 'data' in data and 'items' in data['data']:
-        posts = data['data']['items'][:5]  # Only take the first 5 posts
+        posts = data['data']['items'][:10]  # Only take the first 5 posts
 
         # Extract only required caption information
         for post_index, post in enumerate(posts):

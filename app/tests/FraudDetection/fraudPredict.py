@@ -4,7 +4,7 @@ from app import app
 import requests
 import json
 
-model = joblib.load(r"C:\Users\PURU SINGH\OneDrive\Desktop\Tech simp-2\app\tests\FraudDetection\fraud_detection_model.joblib")
+model = joblib.load(r"C:\Users\PURU SINGH\OneDrive\Desktop\Tech-Simp-2\app\tests\FraudDetection\fraud_detection_model.joblib")
 
 @app.route('/fraud_result', methods=['POST'])
 def fraud_result():
