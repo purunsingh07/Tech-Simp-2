@@ -161,24 +161,23 @@ def user_information_final(username):
     posts = get_recent_posts(username)
     captions = []
 
+
+    profile_info_path = os.path.join(profile_dir, "profile_data.json")
+    with open(profile_info_path, "w") as profile_info_file:
+        json.dump(user_info, profile_info_file, indent=4)
+
     for index, post in enumerate(posts, start=1):
         post_info = {
             "PostNumber": index,
-            "Caption": post.get("caption_text", "No caption text available"),
+            "Caption": post.get("caption_text", "No caption text available") or "No captions available" ,
             "Upload Time": post.get("created_at", "Unknown time"),
         }
         captions.append(post_info)
 
-        # save captions to captions.json
-        captions_path = os.path.join(caption_dir,"captions.json")
-        with open(captions_path,"w") as captions_file:
-            json.dump(captions, captions_file, indent=4)
-
-        profile_info_path = os.path.join(profile_dir, "profile_data.json")
-        with open(profile_info_path, "w") as profile_info_file:
-            json.dump(user_info, profile_info_file, indent=4)
-
-
+    # save captions to captions.json
+    captions_path = os.path.join(caption_dir,"captions.json")
+    with open(captions_path,"w") as captions_file:
+        json.dump(captions, captions_file, indent=4)
 
     return user_info
 
