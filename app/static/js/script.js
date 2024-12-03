@@ -76,6 +76,7 @@ document.getElementById('btnStart').addEventListener('click', () => {
         update.innerHTML = '🟢 ' + 'Verifying Profile...'
 
         document.getElementById('progressData').appendChild(update)
+        
 
         fetch('/detect_fraud_profile', {
             method: 'POST',
@@ -99,7 +100,8 @@ document.getElementById('btnStart').addEventListener('click', () => {
             })
             .catch(error => {
                 console.log(error);
-            });
+            }
+        );
 
     }
 
